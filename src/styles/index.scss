@@ -1,0 +1,30 @@
+@import "~electron-tabs/electron-tabs.css";
+@import '../lib/chrome-tabs.css';
+
+body{
+  margin: 0;
+}
+
+// 只有一个标签时隐藏关闭按钮
+.chrome-tabs-content .chrome-tab:only-child{
+  .chrome-tab-close{
+    display: none;
+  }  
+}
+// 使用 web 背景，避免加载时一片空白
+.etabs-views{
+  background-image: linear-gradient(to right bottom, rgb(215, 187, 234), rgb(101, 168, 241));
+  height: calc(100vh - 47px);
+}
+// 标签菜单样式
+.tab-menu{
+  border-radius: 0!important;
+  .menu_item{
+    line-height: 26px!important;
+    font-size: 12px!important;
+  }
+  .menu_item__available:hover{
+    background: #c8c8c9!important;
+    color: #000!important;
+  }
+}
